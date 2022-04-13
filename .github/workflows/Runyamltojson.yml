@@ -1,0 +1,27 @@
+name: Run Yaml to Json Conversion Powershell Script
+
+# Controls when the workflow will run
+on:
+  pull_request:
+  branches: [ main ]
+    paths:
+    branches: [ main ]
+       
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+   Run_Yaml_to_Json:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # check out and run the script
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v1
+      
+      - name: Check that template version was updated
+        run: .github/workflows/YamltoJson
+        shell: pwsh 
