@@ -23,5 +23,8 @@ jobs:
       - uses: actions/checkout@v1
       
       - name: Check that template version was updated
-        run: ${env:github/workflows/yamltojson}
+        run: |
+          ${env:github/workflows/yamltojson}
+          ConvertSentinelRuleFrom-Yaml -Path './Simbaz22/Azure-Sentinel'
+          
         shell: pwsh 
