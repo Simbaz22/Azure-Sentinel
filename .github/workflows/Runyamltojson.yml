@@ -25,6 +25,6 @@ jobs:
       - name: Check that template version was updated
         run: |
           ${env:github/workflows/yamltojson}
-          ConvertSentinelRuleFrom-Yaml -Path './Simbaz22/Azure-Sentinel'
+          #ConvertSentinelRuleFrom-Yaml -Path './Simbaz22/Azure-Sentinel'
           
         shell: pwsh 
