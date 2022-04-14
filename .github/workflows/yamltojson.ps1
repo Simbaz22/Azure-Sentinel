@@ -129,4 +129,4 @@ function ConvertSentinelRuleFrom-Yaml {
     }
 
 }
-ConvertSentinelRuleFrom-Yaml -Path './Simbaz22/Azure-Sentinel'
+
